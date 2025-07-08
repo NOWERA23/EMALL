@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mall Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('gumtree.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header, footer {
+      background-color: rgba(27, 140, 245, 0.8);
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .login-box {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 35px 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .login-box h2 {
+      margin-bottom: 25px;
+      color: #97c4e2;
+    }
+
+    .login-box input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .login-box button {
+      width: 40%;
+      padding: 12px;
+      margin: 15px 5px;
+      background: #5fbce7;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .login-box button:hover {
+      background: #1b5e20;
+    }
+
+    .login-box .exit-button {
+      background: #d32f2f;
+    }
+
+    .login-box .exit-button:hover {
+      background: #b71c1c;
+    }
+
+    .login-box a {
+      display: block;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    .login-box a:hover {
+      text-decoration: underline;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 480px) {
+      .login-box {
+        padding: 25px 15px;
+      }
+
+      .login-box button {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Mall Login</h1>
+  </header>
+
+  <div class="container">
+    <div class="login-box">
+      <h2>Login to Continue</h2>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <div>
+        <button onclick="login()">Shop Now!</button>
+        <button class="exit-button" onclick="exit()">Open Account </button>
+      </div>
+      <div id="error" class="error-message"></div>
+      <a href="mailto:mall@gmail.org?subject=Forgot Password">Forgot your password?</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Mall Corporation | All Rights Reserved
+  </footer>
+
+  <script>
+    function login() {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const errorDiv = document.getElementById("error");
+
+      if (!username || !password) {
+        errorDiv.textContent = "Please login fill in the blanks.";
+        return;
+      }
+
+      // Example credentials
+      if (username === "1" && password === "1") {
+        alert("Login successful!");
+        window.location.href = "LANDINGPAGE.html"; // Replace with your real page
+      } else {
+        errorDiv.textContent = "Wrong details, try again.";
+      }
+    }
+
+    function exit() {
+      if (confirm("Are you sure you want to exit?")) {
+        window.close();
+      }
+    }
+  </script>
+</body>
+</html>

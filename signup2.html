@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Signup | LUCRATIVE</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('A.png') no-repeat center center fixed;
+      background-size: cover;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Overlay Decoration */
+    .overlay-art {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 280px;
+      height: auto;
+      z-index: 1;
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    .form-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 40px 30px;
+      border-radius: 18px;
+      width: 350px;
+      color: #fff;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+      z-index: 2;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .form-container::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #89cdfa, #005eff, #0084ff);
+      background-size: 600% 600%;
+      animation: glowBorder 12s ease infinite;
+      z-index: -1;
+    }
+
+    @keyframes glowBorder {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translate(-50%, -60%); }
+      100% { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 25px;
+      color: #fff;
+    }
+
+    input[type=text], input[type=number], input[type=password] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: none;
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    input[type=submit] {
+      margin-top: 15px;
+      padding: 12px;
+      width: 100%;
+      background: linear-gradient(135deg, #00ff9d, #00bfff);
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.4s ease;
+    }
+
+    input[type=submit]:hover {
+      background: linear-gradient(135deg, #00cc83, #0099cc);
+    }
+
+    p {
+      margin-top: 18px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.75);
+    }
+
+    a {
+      color: #00ffd5;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 420px) {
+      .form-container {
+        width: 90%;
+        padding: 30px 20px;
+      }
+      .overlay-art {
+        width: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Artistic overlay -->
+  <img src="AA.png" class="overlay-art" alt="Art Overlay" />
+
+  <!-- Signup Form -->
+  <div class="form-container">
+    <h2>Signup</h2>
+    <form action="signup2.php" method="POST">
+      <input type="text" name="name" placeholder="First Name" required />
+      <input type="text" name="surname" placeholder="Last Name" required />
+      <input type="number" name="age" placeholder="Your Age (18+)" min="18" required />
+      <input type="password" name="password" placeholder="Choose a Password" required />
+      <input type="submit" value="Sign Up" />
+    </form>
+    <p>Already have an account? <a href="login2.html">Login</a></p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - LUCRATIVE MALL</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+    }
+    .wrapper {
+      display: flex;
+      min-height: 100vh;
+      flex-wrap: wrap;
+    }
+    .left {
+      flex: 1;
+      background: linear-gradient(rgba(43, 122, 120, 0.9), rgba(43, 122, 120, 0.7)), url('GUMTREE.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .left img.logo {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+    .left h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .left p {
+      max-width: 300px;
+      text-align: center;
+      font-size: 15px;
+    }
+    .image-row {
+      display: flex;
+      gap: 15px;
+      margin-top: 25px;
+    }
+    .image-row img {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .right {
+      flex: 1;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    form {
+      width: 100%;
+      max-width: 400px;
+    }
+    h2 {
+      color: #2b7a78;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    input {
+      width: 100%;
+      padding: 14px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #2b7a78;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #205e5c;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+      text-align: center;
+    }
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #666;
+      background: #f1f1f1;
+    }
+    @media (max-width: 768px) {
+      .wrapper {
+        flex-direction: column;
+      }
+      .left, .right {
+        flex: 1 1 100%;
+        padding: 30px;
+      }
+      .left {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <!-- Left Panel with Branding -->
+    <div class="left">
+      <img src="GUMTREE.jpg" alt="LUCRATIVE Logo" class="logo">
+      <h1>Open Your Shop</h1>
+      <p>Join LUCRATIVE MALL today and bring your business online in just minutes.</p>
+      <div class="image-row">
+        <img src="A.png" alt="A" />
+        <img src="D.png" alt="AA" />
+        <img src="AA.jpg" alt="GUMTREE" />
+      </div>
+    </div>
+
+    <!-- Right Panel with Form -->
+    <div class="right">
+      <form id="signupForm" action="signup.php" method="POST">
+        <h2>Create Account</h2>
+        <input type="text" name="fullname" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="text" name="username" placeholder="Username" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required />
+        <input type="text" name="phone" placeholder="Phone Number" required />
+        <input type="text" name="shopname" placeholder="Shop Name" required />
+        <input type="text" name="category" placeholder="Shop Category" required />
+        <input type="text" name="shopnumber" placeholder="Shop Number" required />
+        <button type="submit">Create Shop Account</button>
+        <p class="error" id="errorText"></p>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 LUCRATIVE MALL – All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      const password = document.querySelector('input[name="password"]').value;
+      const confirm = document.querySelector('input[name="confirm_password"]').value;
+      const errorText = document.getElementById("errorText");
+
+      if (password !== confirm) {
+        errorText.textContent = "Passwords do not match!";
+        e.preventDefault();
+      } else {
+        errorText.textContent = "";
+      }
+    });
+  </script>
+
+</body>
+</html>

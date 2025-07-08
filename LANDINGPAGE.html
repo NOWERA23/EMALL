@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retail Store Landing Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+    }
+
+    header {
+      background-color: #333;
+      padding: 15px 20px;
+      color: white;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    h1 {
+      margin: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    .store-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .store-item {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      animation: float 4s ease-in-out infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 140px;
+    }
+
+    .store-item:hover {
+      transform: scale(1.1);
+    }
+
+    .store-item img {
+      max-width: 100px;
+      max-height: 80px;
+      object-fit: contain;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer button {
+      background-color: #555;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    footer button:hover {
+      background-color: #777;
+    }
+
+    .share-options {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .share-options a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .share-options a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+   LUCRATIVE.COM MALL
+  </header>
+  <div class="store-grid">
+    <!-- Your store items go here, as shown in your original code -->
+    <a class="store-item" href="https://www.shoprite.co.za" target="_blank"><img src="shop.jpg" alt="Shoprite"></a>
+    <a class="store-item" href="https://www.picknpay.co.za" target="_blank"><img src="PNP.jpg" alt="Pick n Pay"></a>
+            <a class="store-item" href="https://www.shoprite.co.za" target="_blank"><img src="shop.jpg" alt="shop.jpg"></a>
+        <a class="store-item" href="https://www.picknpay.co.za" target="_blank"><img src="PNP.jpg" alt="Pick n Pay"></a>
+        <a class="store-item" href="https://www.checkers.co.za" target="_blank"><img src="check.jpg" alt="Checkers"></a>
+        <a class="store-item" href="https://www.spar.co.za" target="_blank"><img src="spar.jpg" alt="Spar"></a>
+        <a class="store-item" href="https://www.woolworths.co.za" target="_blank"><img src="wool.jpg" alt="Woolworths"></a>
+        <a class="store-item" href="https://www.game.co.za" target="_blank"><img src="game.jpg" alt="Game"></a>
+        <a class="store-item" href="https://www.makro.co.za" target="_blank"><img src="makro.jpg" alt="Makro"></a>
+        <a class="store-item" href="https://www.pepstores.com" target="_blank"><img src="pep.png" alt="Pep"></a>
+        <a class="store-item" href="https://www.mrpricegroup.com" target="_blank"><img src="mr.jpg" alt="Mr Price"></a>
+        <a class="store-item" href="https://www.jetonline.co.za" target="_blank"><img src="jet.jpg" alt="Jet"></a>
+        <a class="store-item" href="https://www.amazon.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"></a>
+        <a class="store-item" href="https://www.walmart.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg" alt="Walmart"></a>
+        <a class="store-item" href="https://www.target.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Target_logo.svg" alt="Target"></a>
+        <a class="store-item" href="https://www.costco.com" target="_blank"><img src="coco.jpg" alt="Costco"></a>
+        <a class="store-item" href="https://www.bestbuy.com" target="_blank"><img src="bb.jpg" alt="Best Buy">
+        <a class="store-item" href="https://www.apple.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple"></a>
+        <a class="store-item" href="https://www.nike.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike"></a>
+        <a class="store-item" href="https://www.adidas.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Adidas"></a>
+        <a class="store-item" href="https://www.zara.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara"></a>
+        <a class="store-item" href="https://www.hm.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/H%26M-Logo.svg" alt="H&M"></a>
+        <a class="store-item" href="https://www.footlocker.com" target="_blank"><img src="foot.jpg" alt="Foot Locker"></a>
+        <a class="store-item" href="https://www.shein.com" target="_blank"><img src="she.jpg" alt="SHEIN"></a>
+        <a class="store-item" href="https://www.foschini.co.za" target="_blank"><img src="fos.jpg" alt="Foschini"></a>
+        <a class="store-item" href="https://www.edgars.co.za" target="_blank"><img src="edgers.jpg" alt="Edgars"></a>
+        <a class="store-item" href="https://www.superbalist.com" target="_blank"><img src="super.jpg" alt="Superbalist"></a>
+        <a class="store-item" href="https://www.takealot.com" target="_blank"><img src="take.png" alt="Takealot"></a>
+  </div>
+
+  <footer>
+    <button onclick="alert('Redirecting to Complaint Page 1')">Complaint 1</button>
+    <button onclick="alert('Redirecting to Complaint Page 2')">Complaint 2</button>
+    <button onclick="toggleShare()">Share a Store</button>
+
+    <div class="share-options" id="shareOptions">
+      <p>Share this site:</p>
+      <a href="https://wa.me/?text=https://example.com" target="_blank">WhatsApp</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://example.com" target="_blank">Facebook</a>
+      <a href="https://twitter.com/intent/tweet?url=https://example.com&text=Check%20out%20this%20Retail%20Store%20App" target="_blank">X</a>
+      <a href="mailto:?subject=Check this out&body=https://example.com">Email</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleShare() {
+      const share = document.getElementById("shareOptions");
+      share.style.display = share.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

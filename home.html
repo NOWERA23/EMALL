@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LUCRATIVE.COM - Discover Shopping Bliss</title>
+  <style>
+    /* Reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+      background: linear-gradient(135deg, #ffffff, #f7f7f7);
+      color: #111;
+      overflow-x: hidden;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      width: 100%;
+      padding: 18px 48px;
+      background-color: #111111;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+      font-weight: 600;
+      letter-spacing: 1.1px;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo-container img {
+      height: 52px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #4803ebcc;
+      transition: transform 0.3s ease;
+    }
+    .logo-container img:hover {
+      transform: scale(1.1);
+    }
+    .logo-container h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #0f39f5;
+      text-shadow: 0 0 6px #0a2ce9cc;
+      user-select: none;
+    }
+    .header-buttons button {
+      margin-left: 18px;
+      padding: 14px 36px;
+      font-size: 1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 40px;
+      background: linear-gradient(135deg, #638fe2, #3f87d8);
+      color: #000;
+      cursor: pointer;
+      box-shadow: 0 6px 18px #0011ffaa;
+      transition: all 0.35s ease;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      filter: drop-shadow(0 2px 1px #3178fc);
+    }
+    .header-buttons button:hover {
+      background: linear-gradient(135deg, #5877ff, #56b0fa);
+      box-shadow: 0 9px 24px #4859f5cc;
+      transform: scale(1.08);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 95vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 40px;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(15, 94, 241, 0.75) 0%, rgba(30,30,30,0.85) 80%),
+        url('A.PNG') center/cover no-repeat;
+      filter: contrast(1.05) brightness(0.9);
+      color: white;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.9);
+      user-select: none;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(20,20,20,0.45);
+      backdrop-filter: blur(5px);
+      z-index: 1;
+      pointer-events: none;
+      border-radius: 20px;
+      margin: 10px 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 60px;
+      max-width: 1200px;
+      width: 100%;
+      justify-content: center;
+      animation: fadeSlideIn 1.6s ease forwards;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .rotating-image-container {
+      flex: 1 1 320px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      filter: drop-shadow(0 0 20px #0e7effcc);
+      transition: transform 0.4s ease;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, #0d37f5bb 10%, transparent 75%);
+      padding: 10px;
+    }
+    .rotating-image-container:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 32px #558bffcc);
+    }
+    .rotating-image {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      animation: slowRotate 40s linear infinite;
+      border: 8px solid #7395f5;
+      box-shadow:
+        0 0 40px 8px rgba(78, 80, 226, 0.7),
+        inset 0 0 20px 5px rgba(255,255,255,0.4);
+      transition: filter 0.3s ease;
+    }
+    .rotating-image:hover {
+      filter: brightness(1.1);
+    }
+    @keyframes slowRotate {
+      from { transform: rotate(0deg);}
+      to { transform: rotate(360deg);}
+    }
+
+    .hero-text {
+      flex: 1 1 520px;
+      max-width: 520px;
+      text-align: left;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      line-height: 1.4;
+      user-select: text;
+    }
+
+    .hero-text h1 {
+      font-size: 4.8rem;
+      margin-bottom: 28px;
+      font-weight: 900;
+      color: #8bc5f5;
+      letter-spacing: 0.15em;
+      text-shadow:
+        0 0 10px #52aafcdd,
+        0 6px 10px rgba(0,0,0,0.7);
+      animation: slideFadeDown 1.4s ease forwards;
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    @keyframes slideFadeDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-text p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      color: #f5f3ea;
+      text-shadow: 0 0 15px rgba(0,0,0,0.65);
+      animation: slideFadeUp 1.6s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    @keyframes slideFadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .cta-btn {
+      padding: 18px 56px;
+      font-size: 1.45rem;
+      background: linear-gradient(90deg, #5968ee, #73b0e9);
+      border: none;
+      border-radius: 60px;
+      color: #000;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow:
+        0 10px 20px #60a4fd77,
+        0 0 10px #53a6f5bb inset;
+      transition: all 0.35s ease;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      user-select: none;
+    }
+    .cta-btn:hover {
+      background: linear-gradient(90deg, #0629ee, #031cff);
+      box-shadow:
+        0 14px 32px #ffff9066,
+        0 0 14px #fce85cbb inset;
+      transform: scale(1.12);
+      color: #111;
+    }
+
+    /* Gallery */
+    .gallery {
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+      background: #fff;
+      border-radius: 20px 20px 0 0;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.05);
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(250,205,21,0.25);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.4s ease;
+      user-select: none;
+    }
+    .gallery img:hover {
+      transform: scale(1.07);
+      box-shadow: 0 14px 40px rgba(250,205,21,0.6);
+      filter: drop-shadow(0 0 8px #085cf8);
+      z-index: 5;
+      position: relative;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 80px;
+        height: auto;
+        min-height: 90vh;
+        border-radius: 20px 20px 0 0;
+      }
+      .hero-content {
+        flex-direction: column;
+        gap: 40px;
+        max-width: 360px;
+      }
+      .hero-text h1 {
+        font-size: 3.6rem;
+      }
+      .hero-text p {
+        font-size: 1.25rem;
+        margin-bottom: 32px;
+      }
+      .rotating-image {
+        width: 240px;
+        height: 240px;
+      }
+    }
+    @media (max-width: 480px) {
+      header {
+        padding: 18px 20px;
+      }
+      .header-buttons button {
+        padding: 14px 28px;
+        font-size: 0.95rem;
+      }
+      .hero-text h1 {
+        font-size: 2.8rem;
+        letter-spacing: 0.1em;
+      }
+      .hero-text p {
+        font-size: 1.1rem;
+      }
+      .cta-btn {
+        padding: 14px 38px;
+        font-size: 1.25rem;
+      }
+      .rotating-image {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="GUMTREE.jpg" alt="LUCRATIVE.COM Logo" />
+      <h1>LUCRATIVE.COM</h1>
+    </div>
+    <div class="header-buttons">
+      <button onclick="window.location.href='login2.html'">SHOP NOW</button>
+      <button onclick="window.location.href='login.html'">SELL NOW</button>
+    </div>
+  </header>
+
+  <section class="hero" aria-label="Hero section showcasing LUCRATIVE.COM shopping experience">
+    <div class="hero-content">
+      <div class="rotating-image-container" aria-hidden="true">
+        <img class="rotating-image" src="D.png" alt="Shopping lifestyle" />
+      </div>
+      <div class="hero-text">
+        <br> <br> <br> <br> <br>
+        <h1>E-MALL</h1>
+        <button class="cta-btn" aria-label="Get started with LUCRATIVE.COM">Get Started</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" aria-label="Showcase of shopping categories and products">
+    <img src="A.png" alt="Latest electronics and gadgets" />
+    <img src="B.png" alt="Fashion apparel and accessories" />
+    <img src="C.png" alt="Home and living essentials" />
+    <img src="E.png" alt="Sports and outdoor equipment" />
+  </section>
+
+</body>
+</html>
